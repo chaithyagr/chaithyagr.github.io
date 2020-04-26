@@ -1,0 +1,35 @@
+# site settings
+email: chaithyagr@gmail.com
+description: Research Engineer<br /> CEA Paris-Saclay
+baseurl: "/forty-jekyll-theme" 
+url: # the base hostname & protocol for your site
+author:
+street_address: 2, Avenue des Violettes
+city: Bures-sur-yvette
+state: Ile-de-france
+zip_code: 91440
+country: France
+
+
+# homepage tiles
+tiles-source: pages
+tiles-count: 6
+
+# social settings
+500px_url:
+facebook_url:
+github_url: https://github.com/chaithyagr
+gitlab_url: https://gitlab.com/u/chaithyagr
+googlesch_url: https://scholar.google.co.in/citations?user=heX0yHcAAAAJ&hl=en
+researchgate_url: https://www.researchgate.net/profile/Chaithya_G_R
+instagram_url: https://instagram.com/chaithya_gr
+linkedin_url: https://www.linkedin.com/in/chaithya-gr-b08aab44/
+pinterest_url:
+slack_url:
+twitter_url: 
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
