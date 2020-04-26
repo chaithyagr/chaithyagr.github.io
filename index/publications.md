@@ -1,6 +1,8 @@
 ---
 layout: landing
 title: Publications
+description: 'Cite Me! :P'
+image: assets/images/publications.jpg
 nav-menu: true
 order: 2
 ---

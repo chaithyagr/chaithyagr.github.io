@@ -2,7 +2,7 @@
 title: Experience
 layout: landing
 description: 'Places I worked'
-image: assets/images/pic07.jpg
+image: assets/images/experience.jpg
 nav-menu: true
 order: 3
 ---

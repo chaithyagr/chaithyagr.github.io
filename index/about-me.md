@@ -1,8 +1,8 @@
 ---
 layout: post
 title: About Me
-description: Lorem ipsum dolor est
-image: assets/images/pic11.jpg
+description: I am Chaithya, blah blah
+image: assets/images/about-me.jpg
 nav-menu: true
 order: 1
 ---

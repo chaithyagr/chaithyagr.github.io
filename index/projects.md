@@ -1,10 +1,10 @@
 ---
 title: Projects
 layout: landing
-description: 'Lorem ipsum dolor sit amet nullam consequa<br />sed veroeros. tempus adipiscing nulla.'
-image: assets/images/pic07.jpg
+description: 'Stuff I did that interest me<br />'
+image: assets/images/projects.jpg
 nav-menu: true
-order: 2
+order: 3
 ---
 
 <!-- Main -->
