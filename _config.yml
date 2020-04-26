@@ -2,8 +2,8 @@
 title: Chaithya G R
 email: chaithyagr@gmail.com
 description: Research Engineer<br /> CEA Paris-Saclay
-baseurl: "https://chaithyagr.github.io/" 
-url: # the base hostname & protocol for your site
+baseurl: "" 
+url: "https://chaithyagr.github.io/"# the base hostname & protocol for your site
 author:
 street_address: 2, Avenue des Violettes
 city: Bures-sur-yvette
