@@ -1,4 +1,6 @@
 # site settings
+title: Forty
+subtitle: by HTML5 UP
 email: chaithyagr@gmail.com
 description: Research Engineer<br /> CEA Paris-Saclay
 baseurl: "/forty-jekyll-theme" 
