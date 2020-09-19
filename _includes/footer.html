@@ -1,107 +1,80 @@
-<!-- Contact -->
-<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-<section id="contact">
-	<div class="inner">
-		<section>
-			<form action="https://formspree.io/{{ site.email }}" method="POST">
-				<div class="field half first">
-					<label for="name">Name</label>
-					<input type="text" name="name" id="name" />
-				</div>
-				<div class="field half">
-					<label for="email">Email</label>
-					<input type="text" name="_replyto" id="email" />
-				</div>
-				<div class="field">
-					<label for="message">Message</label>
-					<textarea name="message" id="message" rows="6"></textarea>
-				</div>
-				<ul class="actions">
-					<li><input type="submit" value="Send Message" class="special" /></li>
-					<li><input type="reset" value="Clear" /></li>
-				</ul>
-			</form>
-		</section>
-		<section class="split">
-			<section>
-				<div class="contact-method">
-					<span class="icon alt fa-envelope"></span>
-					<a href="mailto:{{ site.email }}"></a><h3>Email</h3></a>
-				</div>
-				<div class="contact-method">
-					<span class="icon alt fa-linkedin"></span>
-					<a href={{ site.linkedin_url }}><h3>LinkedIn</h3></a>
-				</div>
-				<div class="contact-method">
-					<span class="ai ai-google-scholar ai-2x" aria-hidden="true"></span>
-					<a href={{ site.googleschresearchgate_url }}><h3>Google Scholar</h3></a>
-				</div>
-				<div class="contact-method">
-					<span class="ai ai-researchgate ai-2x"></span>
-					<a href={{ site.researchgate_url }}><h3>ResearchGate</h3></a>
-				</div>
-				<div class="contact-method">
-					<span class="icon alt fa-github"></span>
-					<a href={{ site.github_url }}><h3>GitHub</h3></a>
-				</div>
-				<div class="contact-method">
-					<span class="icon alt fa-gitlab"></span>
-					<a href={{ site.gitlab_url }}><h3>GitLab</h3></a>
-				</div>
-			</section>
-		</section>
-	</div>
-</section>
+{% assign plang = page.lang | default: site.langs[0] | default: "en" %}
+{% assign i18n = site.data.academic_i18n %}
+<footer class="site-footer">
 
-<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="icons">
-				{% if site.twitter_url %}
-				<li><a href="{{ site.twitter_url }}" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-				{% endif %}
-				{% if site.googleplus_url %}
-				<li><a href="{{ site.googleplus_url }}" class="icon alt fa-google-plus" target="_blank"><span class="label">Google+</span></a></li>
-				{% endif %}
-				{% if site.facebook_url %}
-				<li><a href="{{ site.facebook_url }}" class="icon alt fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-				{% endif %}
-				{% if site.instagram_url %}
-				<li><a href="{{ site.instagram_url }}" class="icon alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-				{% endif %}
-				{% if site.pinterest_url %}
-				<li><a href="{{ site.pinterest_url }}" class="icon alt fa-pinterest" target="_blank"><span class="label">Pinterest</span></a></li>
-				{% endif %}
-				{% if site.500px_url %}
-				<li><a href="{{ site.500px_url }}" class="icon alt fa-500px" target="_blank"><span class="label">500px</span></a></li>
-				{% endif %}
-				{% if site.gitlab_url %}
-				<li><a href="{{ site.gitlab_url }}" class="icon alt fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
-				{% endif %}
-				{% if site.github_url %}
-				<li><a href="{{ site.github_url }}" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-				{% endif %}
-				{% if site.slack_url %}
-				<li><a href="{{ site.slack_url }}" class="icon alt fa-slack" target="_blank"><span class="label">Slack</span></a></li>
-				{% endif %}
-				{% if site.linkedin_url %}
-				<li><a href="{{ site.linkedin_url }}" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-				{% endif %}
-			</ul>
-			<ul class="copyright">
-				<li>&copy; {{ site.title }} {{ site.subtitle }}</li>
-				<li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
+  <div class="wrapper">
 
-</div>
+      <ul class="footer-col footer-col-1">
+        <li>
+          {% include _i18n/sitetitle.html %}
 
-<!-- Scripts -->
-	<script src="{{ "assets/js/jquery.min.js" | absolute_url }}"></script>
-	<script src="{{ "assets/js/jquery.scrolly.min.js" | absolute_url }}"></script>
-	<script src="{{ "assets/js/jquery.scrollex.min.js" | absolute_url }}"></script>
-	<script src="{{ "assets/js/skel.min.js" | absolute_url }}"></script>
-	<script src="{{ "assets/js/util.js" | absolute_url }}"></script>
-	<!--[if lte IE 8]><script src="{{ "assets/js/ie/respond.min.js" | absolute_url }}"></script><![endif]-->
-	<script src="{{ "assets/js/main.js" | absolute_url }}"></script>
+        {% if site.author_display %}
+        <span class="author">
+          {{ i18n.by[plang] }}
+          {% if site.author_website %}
+          <a target="_blank" href="{% include _i18n/i18n.html value=site.author_website %}">{{ site.author }}</a>
+          {% else %}
+          {{ site.author }}
+          {% endif %}
+        </span>
+        </li>
+        {% endif %}
+
+        {% if site.description %}
+        <li>{% include _i18n/i18n.html value=site.description %}</li>
+        {% endif %}
+
+      </ul>
+
+      {% if site.pitch %}
+        <nav>
+        {% include nav_menu.html class="footer-col footer-col-2"%}
+        {% include contactlist.html class="single-col" %}
+        </nav>
+      {% else %}
+        {% include contactlist.html class="footer-col footer-col-2" %}
+      {% endif %}
+
+    <div class="bottom">
+
+      {% assign nblangs = site.langs | size %}
+      {% if nblangs > 1 %}
+        {% include _i18n/lang_selector.html %}
+      {% endif %}
+
+      <div class="tech">
+        <a target="_blank" href="https://jekyllrb.com/">Jekyll</a> + <a target="_blank" href="https://github.com/gaalcaras/academic">Academic</a>
+        {% if site.repo %}
+        + <a target="_blank" href="{{ site.repo }}">Source</a>
+        {% endif %}
+      </div>
+
+      <div class="legal">
+      {% if site.cc == null %}©{% endif %}
+      {% include _i18n/sitetitle.html %}
+      {% assign oldest_post = site.posts reversed | first %}
+      {% assign oldest = oldest_post.date | date: "%Y" %}
+      {% assign newest = site.time | date: "%Y" %}
+      ({% if oldest != newest %}{{ oldest }}-{% endif %}{{ newest }})
+      {% if site.author and site.author_display %}
+        {{ i18n.legal[plang][0] }}
+        <a target="_blank" href="{% include _i18n/i18n.html value=site.author_website %}">{{ site.author }}</a> 
+      {% endif %}
+      {% if site.cc %}
+        {{ i18n.legal[plang][1] }}
+        <a target="_blank" rel="license" href="https://creativecommons.org/licenses/{{ site.cc }}/4.0/" class="cc-licence">
+          CC {{ site.cc }}
+        </a>
+      {% endif %}
+     </div>
+    </div>
+
+  </div>
+</footer>
+
+{% if page.layout == "post" %}
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+{% endif %}
+
