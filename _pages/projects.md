@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: A growing collection of things that I worked and that interest me
 nav: true
 ---
 
@@ -27,7 +27,7 @@ nav: true
             {% if project.github %}
             <div class="github-icon">
               <div class="icon" data-toggle="tooltip" title="Code Repository">
-                <a href="{{ project.github }}" target="_blank"><i class="fab fa-github gh-icon"></i></a>
+                <a href="{{ project.github }}" target="_blank"><i class="fab fa-github-alt"></i></a>
               </div>
               {% if project.github_stars %}
               <span class="stars" data-toggle="tooltip" title="GitHub Stars">
@@ -36,6 +36,13 @@ nav: true
               </span>
               {% endif %}
             </div>
+            {% endif %}
+            {% if project.report %}
+            <span class="report-icon" data-toggle="tooltip" title="Report">
+                <div class="icon" data-toggle="tooltip" title="Report">
+                <a href="{{ project.report }}" target="_blank"><i class="fa fa-file"></i></a>
+                </div>
+            </span>
             {% endif %}
           </div>
         </div>

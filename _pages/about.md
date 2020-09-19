@@ -8,17 +8,15 @@ profile:
   align: right
   image: prof_pic.jpg
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Neurospin, CEA Saclay</p>
+    <p>Bât. 145, Gif-sur-Yvette</p>
+    <p>France</p>
 
-news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+news: true  
+selected_papers: true 
+social: true  
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a Research Engineer at CEA Paris Saclay, working in the [INRIA-CEA Parietal Team](https://team.inria.fr/parietal/), with [Dr Philippe CIUCIU](https://scholar.google.fr/citations?user=X-w36z8AAAAJ&hl=fr). I work on Compressed Sensing and its application to Imagining applications, particularly MRI. We strive towards obtaining higher resolution MR scans from a scan of significantly reduced scan time. My interests include signal processing, mathematical modelling and computer architecture. Overall I have love to learn new things and stay curious.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I like to swim, skate, and play basketball. I love to travel places and meet new people and explore new cultures and traditions. A like to do some minute hobby photography and have a keen interest in architectures of monuments from different places. I read occasionaly and binge pretty much in every vacation :P . 
