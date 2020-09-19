@@ -1,9 +1,10 @@
-source "https://rubygems.org"
-gemspec
-gem 'jekyll-feed'
-gem 'redcarpet'
-
+source 'https://rubygems.org'
 group :jekyll_plugins do
-  gem 'jekyll-livereload'
-  gem 'jekyll-last-modified-at'
+    gem 'github-pages'
+    gem 'jekyll'
+    gem 'jekyll-email-protect'
+    gem 'jekyll-paginate-v2'
+    gem 'jekyll-scholar'
+    gem 'jemoji'
+    gem 'unicode_utils'
 end

@@ -2,45 +2,46 @@
 layout: default
 ---
 
-<div class="about-col-wrapper">
-  <div class="about-col about-col-1">
+<div class="post">
 
-    {% if site.github_username %}
-    <img class="user-picture" src="https://github.com/{{ site.github_username }}.png" alt="{{ site.author }}">
+  <header class="post-header">
+    <h1 class="post-title">
+     {% if site.title == blank %}{{ site.title }}{% else %}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}  {{ site.last_name }}{% endif %}
+    </h1>
+  </header>
+
+  <article>
+    {% if page.profile %}
+    <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+      {% if page.profile.image %}
+        <img class="img-fluid z-depth-1 rounded" src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}">
+      {% endif %}
+      {% if page.profile.address %}
+        <div class="address">
+          {{ page.profile.address }}
+        </div>
+      {% endif %}
+    </div>
     {% endif %}
 
-    <ul class="contact-list">
-      {% if site.email %}
-      <li>
-        {% include _icons/email.html username=site.email %}
-      </li>
-      {% endif %}
-
-      {% if site.curriculum.url %}
-      <li>
-        {% include _icons/file.html curriculum=site.curriculum %}
-      </li>
-      {% endif %}
-    </ul>
-
-    <ul class="contact-list">
-      {% if site.author_website %}
-      <li>
-        {% include _icons/website.html url=site.author_website %}
-      </li>
-      {% endif %}
-    </ul>
-
-    {% include contactlist.html %}
-
-  </div>
-  <article class="about-col about-col-2" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <h1>{{ page.title }}</h1>
-
-    <div class="post-content" itemprop="articleBody">
+    <div class="clearfix">
       {{ content }}
     </div>
 
+    {% if page.news %}
+      {% include news.html %}
+    {% endif %}
+
+    {% if page.selected_papers %}
+      {% include selected_papers.html %}
+    {% endif %}
+
+    {% if page.social %}
+    <div class="social">
+      {% include social.html %}
+      <div class="contact-note">{{ site.contact_note }}</div>
+    </div>
+    {% endif %}
   </article>
+
 </div>

@@ -1,338 +1,241 @@
-# academic
+# al-folio
 
-Academic is a [Jekyll](http://jekyllrb.com/) theme with a focus on simplicity, typography and flexibility.
-I originally designed it for my personal blog during my PhD thesis.
+[![build status](https://travis-ci.org/alshedivat/al-folio.svg?branch=master)](https://travis-ci.org/alshedivat/al-folio)
+[![demo](https://img.shields.io/badge/theme-demo-brightgreen.svg)](https://alshedivat.github.io/al-folio/)
+[![gitter](https://badges.gitter.im/alshedivat/al-folio.svg)](https://gitter.im/alshedivat/al-folio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+![GitHub](https://img.shields.io/github/license/alshedivat/al-folio?color=blue)
+[![GitHub stars](https://img.shields.io/github/stars/alshedivat/al-folio)](https://github.com/alshedivat/al-folio)
+[![GitHub forks](https://img.shields.io/github/forks/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/fork)
 
-Check out my [personal website](https://gaalcaras.com) or my [blog](https://sociologs.com) to get a better feel for the Academic theme.
+A simple, clean, and responsive [Jekyll](https://jekyllrb.com/) theme for academics.
+If you like the theme, give it a star!
 
-![Academic screenshot](screenshot.png)
-
-**Simplicity**: both in design and configuration, Academic aims to let the writer and its readers focus on the content.
-Almost all of the theme configuration happens in the `_config.yml` file.
-
-**Typography**: the goal of Academic is to let the author write very long and detailed posts, while being kind to its readers' eyes.
-
-**Flexibility**: Academic can be used to generate different layouts while keeping the same look and feel.
-All features require you to *opt in*, which means that you can either use a very lean `_config.yml` or a very detailed one if you want to use more features.
-
----
-
-Table of contents:
+[![Preview](assets/img/al-folio-preview.png)](https://alshedivat.github.io/al-folio/)
 
 
-* [Features](#features)
-* [Installation](#installation)
-* [Usage](#usage)
-	* [Change the brand color](#change-the-brand-color)
-	* [Setup your `_config.yml` file](#setup-your-_config-yml-file)
-		* [General settings](#general-settings)
-		* [Author](#author)
-		* [Navigation menu](#navigation-menu)
-		* [Multilingual and i18n support](#multilingual-and-i18n-support)
-		* [Plugins](#plugins)
-	* [Layouts](#layouts)
-		* [Post layout](#post-layout)
-		* [Page layout](#page-layout)
-		* [About layout](#about-layout)
-		* [Archive layout](#archive-layout)
-		* [404 layout](#404-layout)
-		* [Sitemap layout](#sitemap-layout)
-* [Contributing](#contributing)
-* [Release log](#release-log)
-* [License](#license)
+## User community
+
+The vibrant community of **al-folio** users is growing!
+Academics around the world use this theme for their homepages, blogs, lab pages, as well as webpages for courses, workshops, conferences, meetups, and more.
+Check out the community webpages below.
+Feel free to add your own page(s) by sending a PR.
+
+<table>
+<tr>
+<td>Academics</td>
+<td>
+<a href="http://maruan.alshedivat.com" target="_blank">★</a>
+<a href="https://maithraraghu.com" target="_blank">★</a>
+<a href="http://platanois.org" target="_blank">★</a>
+<a href="https://otiliastr.github.io" target="_blank">★</a>
+<a href="https://www.maths.dur.ac.uk/~sxwc62/" target="_blank">★</a>
+<a href="http://jessachandler.com/" target="_blank">★</a>
+<a href="https://mayankm96.github.io/" target="_blank">★</a>
+<a href="https://markdean.info/" target="_blank">★</a>
+<a href="https://kakodkar.github.io/" target="_blank">★</a>
+<a href="https://sahirbhatnagar.com/" target="_blank">★</a>
+<a href="https://spd.gr/" target="_blank">★</a>
+<a href="https://jay-sarkar.github.io/" target="_blank">★</a>
+<a href="https://aborowska.github.io/" target="_blank">★</a>
+<a href="https://aditisgh.github.io/" target="_blank">★</a>
+<a href="https://alexhaydock.co.uk/" target="_blank">★</a>
+<a href="https://alixkeener.net/" target="_blank">★</a>
+<a href="https://andreea7b.github.io/" target="_blank">★</a>
+<a href="https://rishabhjoshi.github.io/" target="_blank">★</a>
+<a href="https://sheelabhadra.github.io/" target="_blank">★</a>
+<a href="https://giograno.me/" target="_blank">★</a>
+<a href="https://immsrini.github.io/" target="_blank">★</a>
+<a href="https://apooladian.github.io/" target="_blank">★</a>
+<a href="https://chinmoy-dutta.github.io/" target="_blank">★</a>
+<a href="https://liamcli.com/" target="_blank">★</a>
+</td>
+</tr>
+<tr>
+<td>Labs</td>
+<td>
+<a href="https://www.haylab.caltech.edu/" target="_blank">★</a>
+<a href="https://sjkimlab.github.io/" target="_blank">★</a>
+<a href="https://systemconsultantgroup.github.io/scg-folio/" target="_blank">★</a>
+<a href="https://decisionlab.ucsf.edu/" target="_blank">★</a>
+</td>
+</tr>
+<tr>
+<td>Courses</td>
+<td>
+CMU PGM (<a href="https://sailinglab.github.io/pgm-spring-2019/" target="_blank">S-19</a>),
+CMU DeepRL (<a href="https://cmudeeprl.github.io/703website_f19/" target="_blank">F-19</a>, <a href="https://cmudeeprl.github.io/Spring202010403website/" target="_blank">S-20</a>, <a href="https://cmudeeprl.github.io/703website/" target="_blank">F-20</a>),
+CMU MMML (<a href="https://cmu-multicomp-lab.github.io/mmml-course/fall2020/" target="_blank">F-20</a>)
+</td>
+</tr>
+<tr>
+<td>Conferences & workshops</td>
+<td>
+ML Retrospectives (NeurIPS: <a href="https://ml-retrospectives.github.io/neurips2019/" target="_blank">2019</a>, <a href="https://ml-retrospectives.github.io/neurips2020/" target="_blank">2020</a>; ICML: <a href="https://ml-retrospectives.github.io/icml2020/" target="_blank">2020</a>),
+HAMLETS (NeurIPS: <a href="https://hamlets-workshop.github.io/" target="_blank">2020</a>),
+ICBINB (NeurIPS: <a href="https://i-cant-believe-its-not-better.github.io/" target="_blank">2020</a>)
+</td>
+</tr>
+</table>
+
+
+## Getting started
+
+For more about how to use Jekyll, check out [this tutorial](https://www.taniarascia.com/make-a-static-website-with-jekyll/).
+Why Jekyll? Read this [blog post](https://karpathy.github.io/2014/07/01/switching-to-jekyll/)!
+
+
+### Installation
+
+Assuming you have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Bundler](https://bundler.io/) installed on your system (*hint: for ease of managing ruby gems, consider using [rbenv](https://github.com/rbenv/rbenv)*), first [fork](https://guides.github.com/activities/forking/) the theme from `github.com:alshedivat/al-folio` to `github.com:<your-username>/<your-repo-name>` and do the following:
+
+```bash
+$ git clone git@github.com:<your-username>/<your-repo-name>.git
+$ cd <your-repo-name>
+$ bundle install
+$ bundle exec jekyll serve
+```
+
+Now, feel free to customize the theme however you like (don't forget to change the name!).
+After you are done, **commit** your final changes.
+Now, you can deploy your website to [GitHub Pages](https://pages.github.com/) by running the deploy script:
+
+```bash
+$ ./bin/deploy [--user]
+```
+By default, the script uses the `master` branch for the source code and deploys the webpage to `gh-pages`.
+The optional flag `--user` tells it to deploy to `master` and use `source` for the source code instead.
+Using `master` for deployment is a convention for [user and organization pages](https://help.github.com/articles/user-organization-and-project-pages/).
+
+**Note:** when deploying your user or organization page, make sure the `_config.yml` has `url` and `baseurl` fields as follows.
+
+```
+url:  # should be empty
+baseurl:  # should be empty
+```
+
+
+### Upgrading from a previous version
+
+If you installed **al-folio** as described above, you can upgrade to the latest version as follows:
+
+```bash
+# Assuming the current directory is <your-repo-name>
+$ git remote add upstream https://github.com/alshedivat/al-folio.git
+$ git fetch upstream
+$ git rebase upstream/v0.3.1
+```
+
+If you have extensively customized a previous version, it might be trickier to upgrade.
+You can still follow the steps above, but `git rebase` may result in merge conflicts that must be resolved.
+See [git rebase manual](https://help.github.com/en/github/using-git/about-git-rebase) and how to [resolve conflicts](https://help.github.com/en/github/using-git/resolving-merge-conflicts-after-a-git-rebase) for more information.
+If rebasing is too complicated, we recommend to re-install the new version of the theme from scratch and port over your content and changes from the previous version manually.
+
 
 ## Features
 
-+ **Responsive design** on every page
-+ Designed with **typography best practices** (and my own tastes) in mind:
-    + Simple but elegant fonts, with modular scale
-    + High contrast colors and backgrounds as much as possible ([read more](http://contrastrebellion.com/), [and more](https://backchannel.com/how-the-web-became-unreadable-a781ddc711b6))
-    + Comfortable line length (around 66 characters, [read more](http://webtypography.net/2.1.2))
-    + Attention to vertical rhythm, law of proximity and so on ([read more](http://typographyhandbook.com/))
-+ If you'd like a **multilingual** website, Academic has basic **i18n** support (no plugin required):
-    + *Supported languages* : English, French
-    + Lang selector to change languages automatically added in header and footer
-    + Basic SEO support for multilingual pages (sitemap and `<head>`)
-+ Posts layout allows you to:
-    + Add an **image thumbnail** and a **summary**
-    + Use mathematical notations with **MathJax** (loaded only on posts)
-    + **Tables and footnotes** styled by default (with the `redcarpet` markdown engine)
-    + Add your name and a shortbio at the end of each post
-+ Easily add a "call to action" (RSS feed, Twitter, etc.) at the end of each post and on your homepage
-+ **Add a Creative Commons license** to your website directly from your `_config.yml` file
-+ **Sitemap** and **404 page** layout
-+ Piwik tracking
-+ **About page** layout:
-    + Responsive two-columns layout
-    + Just fill out your usernames for Twitter, Github, LinkedIn, Keybase ; contact email or personal website ; link to your curriculum vitae.
-    + Academic automatically loads your Github profile picture.
-+ Choose between a **navigation menu** at the top or a **short pitch** for your blog
-+ Navigation menu:
-    + Hide pages from the navigation menu
-    + Add external links in the menu from the `_config.yml` file
+### Publications
 
-## Installation
+Your publications page is generated automatically from your BibTex bibliography.
+Simply edit `_bibliography/papers.bib`.
+You can also add new `*.bib` files and customize the look of your publications however you like by editing `_pages/publications.md`.
 
-Add this line to your Jekyll site's Gemfile:
+Keep meta-information about your co-authors in `_data/coauthors.yml` and Jekyll will insert links to their webpages automatically.
 
-```ruby
-gem "academic"
-```
+<p align="center"><img src="assets/img/publications-screenshot.png" width=800></p>
 
-And add this line to your Jekyll site's `_config.yml`:
 
-```yaml
-theme: academic
-```
+### Collections
 
-And then execute:
+This Jekyll theme implements `collections` to let you break up your work into categories.
+The theme comes with two default collections: `news` and `projects`.
+Items from the `news` collection are automatically displayed on the home page.
+Items from the `projects` collection are displayed on a responsive grid on projects page.
 
-```
-$ bundle
-```
+<p align="center"><img src="assets/img/projects-screenshot.png" width=700></p>
 
-Or install it yourself as:
+You can easily create your own collections, apps, short stories, courses, or whatever your creative work is.
+To do this, edit the collections in the `_config.yml` file, create a corresponding folder, and create a landing page for your collection, similar to `_pages/projects.md`.
 
-```
-$ gem install academic
-```
-
-Then add the `jekyll-data` plugin to your `Gemfile` ([see also](https://github.com/ashmaroli/jekyll-data#installation)):
-
-```ruby
-group :jekyll_plugins do
-  gem 'jekyll-data'
-end
-```
-
-I suggest you install and use `redcarpet` to generate your markdown ([read more](http://jekyllrb.com/docs/configuration/#redcarpet)).
-
-## Usage
-
-### Change the brand color
-
-Academic uses 4 shades of grey (very dark grey for the main content, ligther greys to lessen the emphasis on some elements) and a single "brand" color.
-
-By default, the brand color is `#d33682` (purple). If it's not to your taste, you can easily change it by overriding the `$brand-color` variable in `/assets/styles.scss`.
-
-```scss
-$brand-color: red;
-```
-
-### Setup your `_config.yml` file
-
-#### General settings
-
-`title_html`: [optional] you can style the title of your website with html elements.
-
-Example:
-
-```html
-title_html: "<b>hello</b>world"
-```
-
-`pitch`: [optional] a small sentence or motto to quickly describe your blog. If no pitch is detected, Academic will fill the top bar with a navigation menu. If you want to display a short pitch in the top bar, Academic will put thput the navigation menu in the footer. Please note that `pitch` is only used in the top bar ; it is different from the `description` field (used in the footer and the meta tags for search engines).
-
-`description`: [recommended] short description for search engines. It's displayed in the footer of every page. Not to be confused with `pitch`.
-
-`cc`: [optional] choose among the [Creative Commons](https://creativecommons.org/licenses/) licenses (v4). Accepted values are : `by`, `by-sa`, `by-nd`, `by-nc`, `by-nc-sa`, `by-nc-nd`. Defining the `cc` variable will add a small sentence in the footer. If no value is given, a small copyright is added instead.
-
-`nb_posts_page`: [optional] number of posts to display on the homepage. By default, all posts are listed. Note that you should create a page with the archive layout.
-
-`archive_permalink`: [optional] permalink of the archive page. Set to `"/archive"` by default.
-
-`repo`: [optional] link to your website repo. If defined, it's added in the footer. Nothing is displayed otherwise.
-
-`piwik`: [optional]
-
-+ `url`: [mandatory] URL of your Piwik Instance without a trailing slash (like `mywebsite.com/piwik`)
-+ `site_id`: [mandatory] The ID of your website in your Piwik instance
-
-#### Author
-
-`email`: [optional] add email address in about layout.
-
-`curriculum`: [optional]
-
-+ `name`: [optional] text of the link. Default : Curriculum Vitae.
-+ `url`: [mandatory] url of the curriculum file.
-
-`shortbio`: [optional] describe yourself in a sentence or two. If `shortbio` is defined, a small element is added at the end of the post to introduce the author to the readers.
-
-`author_display`: [optional] if `true`, the author's name (and `author_website`) is added in the footer. `false` by default.
-
-`author_website`: [optional] url to the external website of the author. If `author_website` exists, it is added in the about layout and in the footer (if `author_display` is `true`).
-
-`twitter_username`: [optional] your Twitter username. If it exists, your account will be linked in the "call to action" boxes (homepage and posts), in the footer and on the about page.
-
-`github_username`: [optional] your Github username. If it exists, your account will be linked in the footer and on the about page.
-
-`keybase_username`: [optional] your Keybase username. If it exists, your account will be linked on the about page.
-
-`linkedin_username`: [optional] your LinkedIn username. If it exists, your account will be linked on the about page.
-
-#### Navigation menu
-
-`nav_ext_links`: [optional] you can choose to add external links in the top bar. Each item has two attributes:
-
-+ `name`: [mandatory] text for the link
-+ `url`: [mandatory] url
-
-Example:
-
-```yaml
-nav_ext_links:
-  - name: Link 1
-    url: http://jupiterbroadcasting.com/
-  - name: Link 2
-    url: http://wallabag.org/
-```
-
-#### Multilingual and i18n support
-
-Academic works perfectly well as a single language website.
-By default, Academic is in English.
-You can easily switch to another supported language :
-
-```yaml
-langs: ["fr"]
-```
-
-If you need to translate part of your pages or posts, Academic also supports basic i18n and multilingual features.
-
-To enable multilingual mode, just add the following to your `_config.yml`:
-
-```yaml
-langs: ["fr", "en"]
-defaults:
-  - scope:
-      path: ""
-    values:
-      lang: "fr"
-```
-
-The `langs` variable should be an array containing your languages.
-Important: the first item should be your "default" language (ie the language that you translate posts from or/and that has the largest content available).
-The double quotes around the language *do* matter.
-
-Don't forget to define a default lang for your whole website.
-
-If you want to translate some of the variables in your `_config.yml`, you can just do this:
-
-```yaml
-title:
-  fr: "Nom du site en Français"
-  en: "English name of the website"
-```
-
-Translating posts and pages is very easy.
-Let's say my default lang is `fr` and I want to translate `_posts/billet-au-hasard.md` to English.
-
-```yaml
----
-layout: post
-title:  "Billet au hasard"
-permalink: /fr/billet-au-hasard/
-date:   2017-02-14 15:32:29 +0100
----
-```
-
-First, I'll create a new file named `_posts/billet-au-hasard.en.md`.
-Both files have to share the *exact same name before the first extension* (`.md` or `.en.md`) in order to signal to Academic that these posts are translations of eachother.
-
-Then, in `_posts/billet-au-hasard.en.md`, add the lang and change the permalink in your frontmatter:
-
-```yaml
-layout: post
-title: "Random post"
-permalink: /en/random-post
-date:   2017-02-14 15:32:29 +0100
-lang: en
-```
-
-That's it!
-Academic will handle the lang selector and will add `<link />` to the `<head>` section to improve SEO.
-
-Note that you have to handle the permalinks manually.
-I recommend that you use the subdirectory `/lang/` naming convention everywhere, as exemplified above.
-You should at least take care of your homepage URL.
-
-If you'd like Academic to support more languages, please contribute by adding the appropriate translations in `/_data/i18n_academic.yml`.
-
-#### Plugins
-
-Academic is compatible with the `jekyll-last-modified-at` plugin ([repo](https://github.com/gjtorikian/jekyll-last-modified-at)). If installed, the last modified date will be (discretely) displayed in the posts lists and in the post layout.
-
-If you specified a Github `repo`, the last modified date will point to the revision history of the file.
 
 ### Layouts
 
-#### Post layout
+**al-folio** comes with stylish layouts for pages and blog posts.
 
-In the yaml header, you can add some tags to help Academic.
+#### The iconic style of Distill
 
-`summary`: [optional] a short text or abstract. Used in the posts lists and on the post page.
+The theme allows you to create blog posts in the [distill.pub](https://distill.pub/) style:
 
-`thumbnail`: [optional] relative path to image or absolute url to an image that describes your post. Used in the posts lists and on the post page.
+<p align="center"><a href="https://alshedivat.github.io/al-folio/blog/2018/distill/" target="_blank"><img src="assets/img/distill-screenshot.png" width=700></a></p>
 
-#### Page layout
+For more details on how to create distill-styled posts using `<d-*>` tags, please refer to [the example](https://alshedivat.github.io/al-folio/blog/2018/distill/).
 
-In the yaml header, you can add some tags to help Academic.
+#### Full support for math & code
 
-`invisible`: [optional] if `true`, then this page will not be listed in the navigation menu.
+**al-folio** supports fast math typesetting through [KaTeX](https://katex.org/) and code syntax highlighting using [GitHub style](https://github.com/jwarby/jekyll-pygments-themes):
 
-#### About layout
+<p align="center">
+<a href="https://alshedivat.github.io/al-folio/blog/2015/math/" target="_blank"><img src="assets/img/math-screenshot.png" width=400></a>
+<a href="https://alshedivat.github.io/al-folio/blog/2015/code/" target="_blank"><img src="assets/img/code-screenshot.png" width=400></a>
+</p>
 
-Will automatically put the content of the page on the right column. The left column will automatically be filled with the author info provided in the `_config.yml`.
+#### Photos
 
-#### Archive layout
+Photo formatting is made simple using [Bootstrap's grid system](https://getbootstrap.com/docs/4.4/layout/grid/).
+Easily create beautiful grids within your blog posts and project pages:
 
-Create a `archive.md` page, choose the "archive" layout. You don't need to write anything in this file, all posts published will be listed in reverse chronological order.
+<p align="center">
+  <a href="https://alshedivat.github.io/al-folio/projects/1_project/">
+    <img src="assets/img/photos-screenshot.png" width="75%">
+  </a>
+</p>
 
-#### 404 layout
 
-Create a `404.md` page, set the layout:
+### Other features
 
-```
-layout: pagenotfound
-```
+#### Theming
+Six beautiful theme colors have been selected to choose from.
+The default is purple, but you can quickly change it by editing `$theme-color` variable in the `_sass/variables.scss` file.
+Other color variables are listed there as well.
 
-The content of the page will be used in the 404 page.
+#### Social media previews
+**al-folio** supports preview images on social media.
+To enable this functionality you will need to set `serve_og_meta` to `true` in your `_config.yml`.
+Once you have done so, all your site's pages will include Open Graph data in the HTML head element.
 
-#### Sitemap layout
+You will then need to configure what image to display in your site's social media previews.
+This can be configured on a per-page basis, by setting the `og_image` page variable.
+If for an individual page this variable is not set, then the theme will fall back to a site-wide `og_image` variable, configurable in your `_config.yml`.
+In both the page-specific and site-wide cases, the `og_image` variable needs to hold the URL for the image you wish to display in social media previews.
 
-Create a `sitemap.xml` page, set the layout:
-
-```
-layout: sitemap
-```
-
-You now have a sitemap you can feed to the search engines.
-
-### Includes
-
-Sometimes you need to use figures and images in your posts, with detailed captions and maybe even the source of the image.
-The `image.html` allows you to do just that without all the HTML markup.
-
-```
-{% include image.html src="/assets/img/zotero-archives-numeriques/screencast.gif"
-                      caption="Notre solution en action" 
-                      desc="Screencast de capture Zotero"
-                      source="Google"
-                      href="http://google.com"%}
-```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/gaalcaras/academic. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Contributions to al-folio are very welcome!
+Before you get started, please take a look at [the guidelines](CONTRIBUTING.md).
 
-## Release log
+If you would like to improve documentation, add your webpage to the list below, or fix a minor inconsistency or bug, please feel free to send a PR directly to `master`.
+For more complex issues/bugs or feature requests, please open an issue using the appropriate template.
 
-+ 0.1.3 [2016-12]: design refinements (page and about layouts)
-+ 0.1.2 [2016-12]: bug fixes (footer, assets and gemfile cleaning) + `repo` var
-+ 0.1.1 [2016-12]: bug fixes (404 page layout, footer, posts list)
-+ 0.1.0 [2016-12]: first release of the theme.
+
+## FAQ
+
+Here are some frequently asked questions.
+If you have a different question, please ask on [gitter](https://gitter.im/alshedivat/al-folio).
+
+1. **Q:** When I preview my website locally everything looks great, but when I deploy it on GitHub bibliography Liquid tags are not recognized.
+   How do I fix this? <br>
+   **A:** GitHub Pages rendering does not support certain Jekyll plugins, and `jekyll-scholar` that we use to render bibliography is one of them. Please make sure you deploy your website to GitHub using `bin/deploy` script that circumvents the issue.
+
+2. **Q:** When I deploy my fork of al-folio, it says `Deployed successfully!`
+   But when I open `<my-github-username>.github.io`, I get `Page not found (404)` error.
+   How do I fix this? <br>
+   **A:** For personal webpages, please run `bin/deploy --user`.
+   (See also relevant past issues: [#5](https://github.com/alshedivat/al-folio/issues/5), [#49](https://github.com/alshedivat/al-folio/issues/49), [#86](https://github.com/alshedivat/al-folio/issues/86).)
+
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+Originally, **al-folio** was based on the [\*folio theme](https://github.com/bogoli/-folio) (published by [Lia Bogoev](http://liabogoev.com) and under the MIT license).
+Since then, it got a full re-write of the styles and many additional cool features.
