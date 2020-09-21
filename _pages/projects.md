@@ -4,6 +4,7 @@ title: projects
 permalink: /projects/
 description: A growing collection of things that I worked and that interest me
 nav: true
+social: true
 ---
 
 <div class="projects grid">
