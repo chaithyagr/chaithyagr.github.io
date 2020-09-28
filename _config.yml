@@ -82,7 +82,7 @@ collections:
     output: true
     permalink: /projects/:path/
 
-news_limit: 5
+news_limit: 3
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -101,6 +101,7 @@ kramdown:
     block:
       line_numbers: false
       start_line: 1
+    auto_ids: true
 
 # Includes & excludes
 include: ['_pages']
