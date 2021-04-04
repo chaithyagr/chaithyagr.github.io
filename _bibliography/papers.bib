@@ -7,7 +7,28 @@
   pages={105--108},
   year={2016},
   organization={IEEE},
+type={Conference},
+abstract={Multicolored Matrix (MCM) Code is a two-dimensional color coded matrix. It consists a sequence of images rendered at an optimum frame rate to transfer simple data between portable devices such as a mobile phone. We introduce an untried channel-less short range communication technology, designed with limitless storage capacity, great structural stability and flexibility due to which it can work in harsh lighting environments and still combat readability issues in the decoding process. The idea is inspired by the already existing QR code. Our method has various code types in terms of number of colors and size of matrix depending on length of the data. This paper introduces our new idea of data transfer, the technical features of the code along with the encoding-decoding techniques, bit error rates and future scope of improvements for the idea.},
 }
+
+
+@Article{jimaging7030058,
+AUTHOR = {El Gueddari, Loubna and Chaithya, G R and Chouzenoux, Emilie and Ciuciu, Philippe},
+TITLE = {Calibration-Less Multi-Coil Compressed Sensing Magnetic Resonance Image Reconstruction Based on OSCAR Regularization},
+JOURNAL = {Journal of Imaging},
+VOLUME = {7},
+YEAR = {2021},
+NUMBER = {3},
+ARTICLE-NUMBER = {58},
+URL = {https://www.mdpi.com/2313-433X/7/3/58},
+ISSN = {2313-433X},
+ABSTRACT = {Over the last decade, the combination of compressed sensing (CS) with acquisition over multiple receiver coils in magnetic resonance imaging (MRI) has allowed the emergence of faster scans while maintaining a good signal-to-noise ratio (SNR). Self-calibrating techniques, such as ESPiRIT, have become the standard approach to estimating the coil sensitivity maps prior to the reconstruction stage. In this work, we proceed differently and introduce a new calibration-less multi-coil CS reconstruction method. Calibration-less techniques no longer require the prior extraction of sensitivity maps to perform multi-coil image reconstruction but usually alternate estimation sensitivity map estimation and image reconstruction. Here, to get rid of the nonconvexity of the latter approach we reconstruct as many MR images as the number of coils. To compensate for the ill-posedness of this inverse problem, we leverage structured sparsity of the multi-coil images in a wavelet transform domain while adapting to variations in SNR across coils owing to the OSCAR (octagonal shrinkage and clustering algorithm for regression) regularization. Coil-specific complex-valued MR images are thus obtained by minimizing a convex but nonsmooth objective function using the proximal primal-dual Condat-Vù algorithm. Comparison and validation on retrospective Cartesian and non-Cartesian studies based on the Brain fastMRI data set demonstrate that the proposed reconstruction method outperforms the state-of-the-art (ℓ1-ESPIRiT, calibration-less AC-LORAKS and CaLM methods) significantly on magnitude images for the T1 and FLAIR contrasts. Additionally, further validation operated on 8 to 20-fold prospectively accelerated high-resolution ex vivo human brain MRI data collected at 7 Tesla confirms the retrospective results. Overall, OSCAR-based regularization preserves phase information more accurately (both visually and quantitatively) compared to other approaches, an asset that can only be assessed on real prospective experiments.},
+DOI = {10.3390/jimaging7030058},
+PDF = {https://www.mdpi.com/2313-433X/7/3/58/pdf},
+selected={true},
+type={Journal},
+}
+
 
 @article{shukla2018multi,
   title={A multi-center study on human brain glutathione conformation using magnetic resonance spectroscopy},
@@ -18,8 +39,10 @@
   pages={517--532},
   year={2018},
   publisher={IOS Press},
+  abstract={Molecular dynamics simulation and in vitro nuclear magnetic resonance (NMR) studies on glutathione (GSH) indicated existence of closed and extended conformations. The present work in a multi-center research setting reports in-depth analysis of GSH conformers in vivo using a common magnetic resonance spectroscopy (MRS) protocol and signal processing scheme. MEGA-PRESS pulse sequence was applied on healthy subjects using 3T Philips MRI scanner (India) and 3T GE MRI scanner (Norway) using the same experimental parameters (echo time, repetition time, and selective 180° refocusing ON-pulse at 4.40 ppm and 4.56 ppm). All MRS data were processed at one site National Brain Research Center (NBRC) using in-house MRS processing toolbox (KALPANA) for consistency. We have found that both the closed and extended GSH conformations are present in human brain and the relative proportion of individual conformer peak depends on the specific selection of refocusing ON-pulse position in MEGA-PRESS pulse sequence. It is important to emphasize that in vivo experiments with different refocusing and inversion pulse positions, echo time, and voxel size, clearly evidence the presence of both the GSH conformations. The GSH conformer peak positions for the closed GSH (Cys-Hβ) peak at ∼2.80 ppm and extended GSH (Cys-Hβ) peak at ∼2.95 ppm remain consistent irrespective of the selective refocusing OFF-pulse positions. This is the first in vivo study where both extended and closed GSH conformers are detected using the MEGA-PRESS sequence employing the parameters derived from the high resolution in vitro NMR studies on GSH.},
   PDF={https://content.iospress.com/download/journal-of-alzheimers-disease/jad180648?id=journal-of-alzheimers-disease%2Fjad180648},
-  selected={true}
+  selected={true},
+type={Journal},
 }
 
 @article{farrens2020pysap,
@@ -33,6 +56,17 @@
   PDF={http://cosmic.cosmostat.org/wp-content/uploads/2020/07/Farrens_ASCOM2020.pdf},
   CODE={https://github.com/CEA-COSMIC/pysap},
   selected={true},
+type={Journal},
+}
+@misc{chaithya2021learning,
+      title={Learning the sampling density in 2D SPARKLING MRI acquisition for optimized image reconstruction}, 
+      author={Chaithya, G R and Zaccharie Ramzi and Philippe Ciuciu},
+      year={2021},
+      eprint={2103.03559},
+      archivePrefix={arXiv},
+      primaryClass={eess.SP},
+      abstract={The SPARKLING algorithm was originally developed for accelerated 2D magnetic resonance imaging (MRI) in the compressed sensing (CS) context. It yields non-Cartesian sampling trajectories that jointly fulfill a target sampling density while each individual trajectory complies with MR hardware constraints. However, the two main limitations of SPARKLING are first that the optimal target sampling density is unknown and thus a user-defined parameter and second that this sampling pattern generation remains disconnected from MR image reconstruction thus from the optimization of image quality. Recently, datadriven learning schemes such as LOUPE have been proposed to learn a discrete sampling pattern, by jointly optimizing the whole pipeline from data acquisition to image reconstruction. In this work, we merge these methods with a state-of-the-art deep neural network for image reconstruction, called XPDNET, to learn the optimal target sampling density. Next, this density is used as input parameter to SPARKLING to obtain 20x accelerated non-Cartesian trajectories. These trajectories are tested on retrospective compressed sensing (CS) studies and show superior performance in terms of image quality with both deep learning (DL) and conventional CS reconstruction schemes.},
+      type={Pre-Prints}
 }
 
 @inproceedings{gueddari:hal-02399267,
@@ -47,6 +81,7 @@
   CODE={https://github.com/CEA-COSMIC/pysap-mri},
   HAL_ID = {hal-02399267},
   HAL_VERSION = {v1},
+type={Conference},
 }
 
 @preprint{ChaithyaGR_IEEE_20,
@@ -58,6 +93,8 @@
 	year = {2020},
 	month = dec,
   PDF={https://hal.inria.fr/hal-03090471},
+  abstract={The Spreading Projection Algorithm for Rapid K-space sampLING, or SPARKLING, is an optimization-driven method that has been recently introduced for accelerated 2D T2* weighted magnetic resonance imaging~(MRI) using compressed sensing. It has then been extended to address 3D imaging using either stacks of 2D sampling patterns or a local 3D strategy that optimizes a single sampling trajectory at a time. 2D SPARKLING actually performs variable density sampling (VDS) along a prescribed target density while maximizing sampling efficiency and meeting the gradient-based hardware constraints. However, 3D SPARKLING has remained limited in terms of acceleration factors along the third dimension if one wants to preserve a peaky point spread function (PSF) and thus good image quality. In this paper, in order to achieve higher acceleration factors in 3D imaging while preserving image quality, we propose a new efficient algorithm that performs globally optimized 3D SPARKLING. Its computational complexity scales up with the number of k-space samples p at the rate of O(p log(p)) and allows for the optimization of all k-space trajectories simultaneously, thus yielding a full 3D VDS pattern. We compare multi-CPU and GPU implementations and demonstrate that the latter is optimal for 3D imaging in the high-resolution acquisition regime (600 um isotropic). Finally, we show that this novel globally optimized 3D SPARKLING approach outperforms stacking strategies through retrospective and prospective studies on NIST phantom and in vivo brain scans at 3 Tesla, respectively. Overall the proposed method allows for 5x shorter scan times compared to GRAPPA-4 parallel imaging acquisition at 3 Tesla.},
   HAL_ID={hal-03090471},
   selected={true},
+type={Pre-Prints},
 }
