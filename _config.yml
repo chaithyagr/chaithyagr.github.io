@@ -124,11 +124,11 @@ scholar:
 
   last_name: Chaithya
 
-  style: apa
+  style: _bibliography/ieee.csl
   locale: en
 
   source: /_bibliography/
-  bibliography: papers.bib
+  bibliography: papers.bib 
   bibliography_template: bib
 
   replace_strings: true
