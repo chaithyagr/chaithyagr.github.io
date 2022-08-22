@@ -103,17 +103,95 @@ type={Journal},
 type={Conference},
 }
 
-@preprint{ChaithyaGR_IEEE_20,
-	author = {Chaithya, G R and Weiss, P. and Ripart, M. and Massire, A. and Vignaud, A. and Ciuciu, P.},
-	title = {{Globally optimized 3D SPARKLING trajectories for high-resolution T2*-weighted Magnetic Resonance imaging}},
-	type = {\emph{under review} at \emph{IEEE Transactions on Medical Imaging}},
-	institution = {CEA Saclay \& Inria Parietal},
-	address = {Saclay, France},
-	year = {2020},
-	month = dec,
-  PDF={https://hal.inria.fr/hal-03090471},
-  abstract={The Spreading Projection Algorithm for Rapid K-space sampLING, or SPARKLING, is an optimization-driven method that has been recently introduced for accelerated 2D T2* weighted magnetic resonance imaging~(MRI) using compressed sensing. It has then been extended to address 3D imaging using either stacks of 2D sampling patterns or a local 3D strategy that optimizes a single sampling trajectory at a time. 2D SPARKLING actually performs variable density sampling (VDS) along a prescribed target density while maximizing sampling efficiency and meeting the gradient-based hardware constraints. However, 3D SPARKLING has remained limited in terms of acceleration factors along the third dimension if one wants to preserve a peaky point spread function (PSF) and thus good image quality. In this paper, in order to achieve higher acceleration factors in 3D imaging while preserving image quality, we propose a new efficient algorithm that performs globally optimized 3D SPARKLING. Its computational complexity scales up with the number of k-space samples p at the rate of O(p log(p)) and allows for the optimization of all k-space trajectories simultaneously, thus yielding a full 3D VDS pattern. We compare multi-CPU and GPU implementations and demonstrate that the latter is optimal for 3D imaging in the high-resolution acquisition regime (600 um isotropic). Finally, we show that this novel globally optimized 3D SPARKLING approach outperforms stacking strategies through retrospective and prospective studies on NIST phantom and in vivo brain scans at 3 Tesla, respectively. Overall the proposed method allows for 5x shorter scan times compared to GRAPPA-4 parallel imaging acquisition at 3 Tesla.},
-  HAL_ID={hal-03090471},
-  selected={true},
-type={Pre-Prints},
+@patent{patent_more,
+	title = {{Method and apparatus for performing accelerated Magnetic Resonance Imaging with reduced off-resonance effect}},
+	author = {Chaithya, G R and Daval-Fr\'erot, G. and Vignaud, A. and P. Ciuciu},
+	institution = {CEA/NeuroSpin and Siemens-Healthcare SAS},
+	year = {2022},
+	month = apr,
+	number = {1000506640/EP22305592.2},
+  	note = {Patent Application: Europe N° 22305592.2},
+	type = {Patent}
+}
+
+
+@INPROCEEDINGS{GR_EUSIPCO2021,
+	author = {Chaithya, G R and Ramzi, Z. and P. Ciuciu},
+	title = {{Learning the sampling density in 2D SPARKLING MRI acquisition for optimized image reconstruction}},
+	booktitle = {29th European Signal Processing Conference ({EUSIPCO})},
+	year = {2021},
+	pages = {960--964},
+	address = {Dublin, Ireland},
+	month = sep
+}
+
+@INPROCEEDINGS{GR_ISBI22,
+	author = {Chaithya, G R and Ramzi, Z. and P. Ciuciu},
+	title = {{Hybrid learning of Non-Cartesian k-space trajectory and MR image reconstruction networks}},
+	booktitle = { 19th } # isbi,
+	year = {2022},
+	pages = {},
+	address = {Kolkata, India},
+	month = mar
+}
+
+@INPROCEEDINGS{Pooja_ISBI22,
+	author = {Pooja, Kumari, Chaithya, G R and Ramzi, Z. and P. Ciuciu},
+	title = {{MC-PDNet: Deep Unrolled Neural Network for Multi-contrast MR Image Reconstruction from Undersampled k-space data}},
+	booktitle = { 19th } # isbi,
+	year = {2022},
+	pages = {},
+	address = {Kolkata, India},
+	month = mar
+}
+
+@INPROCEEDINGS{GR_ISMRM22,
+	author = {Chaithya, G R and P. Ciuciu},
+	title = {{Benchmarking learned non-Cartesian k-space trajectories and reconstruction networks}},
+	booktitle = {30th } #proc# ismrm,
+	year = {2022},
+	number = {3308},
+	address = {London, UK},
+	month = may
+}
+
+
+@INPROCEEDINGS{GR_DavalFrerot_ISMRM22,
+	author = {Chaithya, G R and Daval-Fr\'erot, G. and Massire, A. andMailhe, B. and Nadar, M. and Vignaud, A. and P. Ciuciu},
+	title = {{MORE-SPARKLING: Non-Cartesian trajectories with Minimized Off-Resonance Effects}},
+	booktitle = {30th } #proc# ismrm,
+	year = {2022},
+	number = {1435},
+	address = {London, UK},
+	month = may
+}
+
+@INPROCEEDINGS{Amor_ISMRM22a,
+	author = {Amor, Z. and Chaithya, G R and Le Ster, C. and Daval-Fr\'erot, G. and Boulant, N. and Mauconduit, F. and Mirkes, C. and P. Ciuciu and Vignaud, A.},
+	title = {{$B_0$ field distortions monitoring and correction for 3D non-Cartesian fMRI acquisitions using a field camera: Application to 3D-SPARKLING at 7T}},
+	booktitle = {30th } #proc# ismrm,
+	year = {2022},
+	number = {2822},
+	address = {London, UK},
+	month = may
+}
+
+@INPROCEEDINGS{Amor_ISMRM22b,
+	author = {Amor, Z. and Chaithya, G R and Daval-Fr\'erot, G. Thirion, B. and Mauconduit, F. and Mirkes, C. and P. Ciuciu and Vignaud, A.},
+	title = {{Prospects of non-Cartesian 3D-SPARKLING encoding for functional MRI: A preliminary case study for retinotopic mapping}},
+	booktitle = {30th } #proc# ismrm,
+	year = {2022},
+	number = {2823},
+	address = {London, UK},
+	month = may
+}
+
+@INPROCEEDINGS{Baptista_ISMRM22,
+	author = {Baptista, R. and Vignaud, A. and Chaithya, G R and Daval-Fr\'erot, G. and Mauconduit, F. and Naudin, M. and Lapert, M. and Guillevin, R. and P. Ciuciu and Lerman-Rabrait, C. and Boumezbeur, F.},
+	title = {{Evaluation of 3D SPARKLING readout for Sodium UTE MRI at ultra-high magnetic field}},
+	booktitle = {30th } #proc# ismrm,
+	year = {2022},
+	number = {},
+	address = {London, UK},
+	month = may
 }
