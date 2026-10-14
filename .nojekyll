@@ -1,0 +1,2 @@
+# Stops GitHub Pages from running Jekyll over this directory, so index.html and
+# 404.html are served exactly as written.

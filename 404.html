@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chaithya G R - this site has moved</title>
+    <meta name="author" content="Chaithya G R" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://cgiliyar.gitlabpages.inria.fr/" />
+    <meta http-equiv="refresh" content="0;url=https://cgiliyar.gitlabpages.inria.fr/" />
+    <script>
+      // GitHub serves this file for every unknown path, so it doubles as the
+      // deep-link redirect: /publications/foo/ becomes the same path on the new
+      // host, query string and fragment included.  Build assets, sitemaps and
+      // feeds from the old Astro build have no equivalent there, so they go to
+      // the front page instead.  The <meta refresh> above is the no-JavaScript
+      // fallback and can only point at the root.
+      (function () {
+        var target = "https://cgiliyar.gitlabpages.inria.fr";
+        var path = window.location.pathname || "/";
+        var stale =
+          path.indexOf("/_astro/") === 0 ||
+          path.indexOf("/images/") === 0 ||
+          path === "/favicon.ico" ||
+          path === "/favicon.svg" ||
+          path === "/photo.jpg" ||
+          path === "/sitemap-0.xml" ||
+          path === "/sitemap-index.xml";
+        window.location.replace(
+          target + (stale ? "/" : path) + window.location.search + window.location.hash,
+        );
+      })();
+    </script>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #ffffff;
+        color: #1a1a1a;
+        font: 16px/1.6 ui-sans-serif, system-ui, sans-serif;
+      }
+      main {
+        max-width: 34rem;
+        padding: 2rem 1.25rem;
+        text-align: center;
+      }
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: 1.5rem;
+      }
+      p {
+        margin: 0.5rem 0;
+      }
+      a {
+        color: #0b6b6b;
+        word-break: break-word;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #111114;
+          color: #eeeeee;
+        }
+        a {
+          color: #6fd3c7;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>This site has moved</h1>
+      <p>
+        The academic portfolio of Chaithya G R now lives at
+        <a href="https://cgiliyar.gitlabpages.inria.fr/">cgiliyar.gitlabpages.inria.fr</a>.
+      </p>
+      <noscript>
+        <p>
+          <a href="https://cgiliyar.gitlabpages.inria.fr/">Follow this link</a>
+          if you were not redirected automatically.
+        </p>
+      </noscript>
+    </main>
+  </body>
+</html>

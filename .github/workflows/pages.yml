@@ -1,0 +1,57 @@
+# GitHub Actions: publish the "site has moved" redirect to GitHub Pages.
+#
+# The portfolio itself is built and hosted by GitLab Pages now (see the GitLab
+# project cgiliyar/personal-webpage).  This repository exists only so that old
+# links to chaithyagr.github.io keep working, so there is nothing to compile: the
+# pages at the root of this repository are copied into `_site` and uploaded
+# verbatim as the Pages artifact.
+#
+# Deploying from Actions is opt-in, because Pages for this repository currently
+# publishes the `main` branch itself rather than an Actions artifact.  To switch
+# over: set Pages (Settings -> Pages -> Build and deployment) to "GitHub Actions",
+# then create the repository variable `pages_source` = `actions` (Settings ->
+# Variables and secrets -> Actions -> Variables).  Until that variable exists the
+# workflow stays skipped instead of failing on every push.
+name: Deploy site-moved redirect
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Only one deployment may run at a time; newer pushes wait for it.
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    name: Deploy redirect
+    runs-on: ubuntu-latest
+    if: vars.pages_source == 'actions'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Collect the pages of the redirect site
+        run: |
+          mkdir _site
+          cp index.html 404.html robots.txt _site/
+          touch _site/.nojekyll
+
+      - name: Upload the redirect as the Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

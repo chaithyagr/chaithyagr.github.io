@@ -1,0 +1,7 @@
+# The portfolio moved to https://cgiliyar.gitlabpages.inria.fr/.
+#
+# Crawling is deliberately *not* blocked here: robots must be able to reach these
+# pages to read their "noindex" and rel="canonical" tags, which is what tells
+# search engines to drop the old github.io URLs in favour of the new site.
+User-agent: *
+Disallow:
